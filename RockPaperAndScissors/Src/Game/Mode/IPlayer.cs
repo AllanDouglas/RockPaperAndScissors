@@ -9,5 +9,7 @@
         /// The Selected Weapon
         /// </summary>
         Weapons.IWeapon SelectedWeapon { get; }
+        
+
     }
 }

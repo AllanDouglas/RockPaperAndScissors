@@ -26,8 +26,6 @@ namespace RockPaperAndScissors.Src.Game.Weapons
         /// Weapons that are weaker than this
         /// </summary>
         public virtual IWeakness[] Weaknesses { get; protected set; }
-       
-       
         #endregion
     }
 }

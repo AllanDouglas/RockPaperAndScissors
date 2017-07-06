@@ -18,9 +18,9 @@ namespace RockPaperAndScissors.Src.Game.Mode
         IPlayer PlayerTwo { get; }
 
         /// <summary>
-        /// Define the Game Style
+        /// Define the Game Rule
         /// </summary>
-        IGameStyle[] GameStyle { get; }
+        Rules.IRule[] GameRule { get; }
 
         /// <summary>
         /// Setup the GameMode 
