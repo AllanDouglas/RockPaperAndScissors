@@ -1,6 +1,5 @@
-﻿using RockPaperAndScissors.Src.Game.Core;
-using RockPaperAndScissors.Src.Game.Weapons;
-using System;
+﻿using System;
+using System.Windows.Forms;
 
 namespace RockPaperAndScissors
 {
@@ -8,12 +7,12 @@ namespace RockPaperAndScissors
     {
         /// <summary>
         /// Start Point
-        /// </summary>        
+        /// </summary>   
+        [STAThread]
         static void Main()
         {
-            
-         
-
+            Application.EnableVisualStyles();
+            Application.Run(new Src.Game.View.MainMenu());
         }
     }
 }

@@ -64,6 +64,25 @@
     <Compile Include="Src\Game\Rules\IRule.cs" />
     <Compile Include="Src\Game\Core\IPlayer.cs" />
     <Compile Include="Src\Game\Utils\Random.cs" />
+    <Compile Include="Src\Game\View\ComputerVsComputer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Src\Game\View\ComputerVsComputer.Designer.cs">
+      <DependentUpon>ComputerVsComputer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Src\Game\View\IGameView.cs" />
+    <Compile Include="Src\Game\View\PlayerVsComputer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Src\Game\View\PlayerVsComputer.Designer.cs">
+      <DependentUpon>PlayerVsComputer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Src\Game\View\MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Src\Game\View\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Src\Game\Weapons\IWeakness.cs" />
     <Compile Include="Src\Game\Weapons\IWeapon.cs" />
     <Compile Include="Src\Game\Weapons\Paper.cs" />
@@ -83,6 +102,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Src\Game\View\ComputerVsComputer.resx">
+      <DependentUpon>ComputerVsComputer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Src\Game\View\IGameView.resx">
+      <DependentUpon>IGameView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Src\Game\View\PlayerVsComputer.resx">
+      <DependentUpon>PlayerVsComputer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Src\Game\View\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -99,6 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Src\Game\Res\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
