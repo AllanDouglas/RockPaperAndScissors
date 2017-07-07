@@ -13,17 +13,8 @@ namespace RockPaperAndScissors.Src.Game.Core
         /// <summary>
         /// Selected Weapon from the player
         /// </summary>
-        public IWeapon SelectedWeapon { get; protected set; }
-
-        /// <summary>
-        /// Game Rules
-        /// </summary>
-        protected IRule rules;
-
-        /// <summary>
-        /// Chose a Weapon
-        /// </summary>
-        /// <param name="wweapon"></param>
-        public abstract void Choose(IWeapon weapon = null);
+        public virtual IWeapon SelectedWeapon { get; protected set; }
+ 
+       
     }
 }
