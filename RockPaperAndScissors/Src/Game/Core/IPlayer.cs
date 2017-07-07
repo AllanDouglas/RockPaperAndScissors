@@ -1,4 +1,4 @@
-﻿namespace RockPaperAndScissors.Src.Game.Mode
+﻿namespace RockPaperAndScissors.Src.Game.Core
 {
     /// <summary>
     /// Player Interface

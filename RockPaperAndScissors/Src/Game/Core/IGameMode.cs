@@ -1,6 +1,6 @@
 ﻿using RockPaperAndScissors.Src.Game.Weapons;
 
-namespace RockPaperAndScissors.Src.Game.Mode
+namespace RockPaperAndScissors.Src.Game.Core
 {
     /// <summary>
     /// GameMode Interface

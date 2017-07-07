@@ -1,4 +1,4 @@
-﻿using RockPaperAndScissors.Src.Game.Mode;
+﻿using RockPaperAndScissors.Src.Game.Core;
 using RockPaperAndScissors.Src.Game.Weapons;
 using System;
 

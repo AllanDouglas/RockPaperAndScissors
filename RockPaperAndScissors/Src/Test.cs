@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 using RockPaperAndScissors.Src.Game.Core;
-using RockPaperAndScissors.Src.Game.Mode;
+
 
 namespace RockPaperAndScissors.Src
 {
@@ -14,9 +14,9 @@ namespace RockPaperAndScissors.Src
             Game.Rules.IRule basics = Game.Rules.Basic.Instance;
 
             Human one = new Human();
-            one.SetWeapon(Game.Weapons.Rock.Instance);
+            one.SelectedWeapon = (Game.Weapons.Rock.Instance);
             Human two = new Human();
-            two.SetWeapon(Game.Weapons.Scissors.Instance);
+            two.SelectedWeapon = (Game.Weapons.Scissors.Instance);
 
             Console.WriteLine(one.SelectedWeapon.Name);
             Console.WriteLine(two.SelectedWeapon.Name);

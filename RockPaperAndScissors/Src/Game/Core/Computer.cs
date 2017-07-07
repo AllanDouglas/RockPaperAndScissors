@@ -1,10 +1,16 @@
-﻿using RockPaperAndScissors.Src.Game.Weapons;
+﻿using System;
+using RockPaperAndScissors.Src.Game.Core;
+using RockPaperAndScissors.Src.Game.Weapons;
 
 namespace RockPaperAndScissors.Src.Game.Core
 {
-    class Computer : Player
+    class Computer : IPlayer
     {
-      
+        /// <summary>
+        /// Selectted Weapon
+        /// </summary>
+        public IWeapon SelectedWeapon { get; private set;}
+
         /// <summary>
         /// Choose the Weapon
         /// </summary>
