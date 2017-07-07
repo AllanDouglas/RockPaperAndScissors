@@ -1,6 +1,6 @@
-﻿using RockPaperAndScissors.Src.Game.Core;
+﻿using RockPaperAndScissors.Src.Game.Core.Exceptions;
 using RockPaperAndScissors.Src.Game.Weapons;
-using System;
+
 
 namespace RockPaperAndScissors.Src.Game.Core
 {
@@ -21,7 +21,7 @@ namespace RockPaperAndScissors.Src.Game.Core
             // check about null weapons
             if (one.SelectedWeapon == null | two.SelectedWeapon == null)
             {
-                throw new NullReferenceException("Both players must have non-null weapons");
+                throw new WeaponNotSelectedExeption("Both players must have non-null weapons");
             }
 
             // check if Selected Weapons are the same

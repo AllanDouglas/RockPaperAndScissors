@@ -20,18 +20,29 @@ namespace RockPaperAndScissors.Src.Game.Core
         /// <summary>
         /// Define the Game Rule
         /// </summary>
-        Rules.IRule[] GameRule { get; }
+        Rules.IRule GameRule { get; }
 
         /// <summary>
         /// Setup the GameMode 
         /// </summary>
-        void Setup();
+        /// <param name="rule"></param>
+        void Setup(Rules.IRule rule);
 
         /// <summary>
         /// Start the GameMode
         /// </summary>
         void Start();
 
+        /// <summary>
+        /// Restart the game mode
+        /// </summary>
+        void Restart();
+
+        /// <summary>
+        /// Compare the Players Weapons
+        /// </summary>
+        /// <returns>The winner Player; Null if draw</returns>
+        IPlayer Fight();
 
     }
 }

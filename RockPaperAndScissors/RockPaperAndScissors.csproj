@@ -52,9 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Src\Game\Core\Exceptions\BadGameModeSetupException.cs" />
     <Compile Include="Src\Game\Core\Computer.cs" />
     <Compile Include="Src\Game\Core\GameHelper.cs" />
     <Compile Include="Src\Game\Core\Human.cs" />
+    <Compile Include="Src\Game\Core\PlayerVSComputer.cs" />
+    <Compile Include="Src\Game\Core\Exceptions\WeaponNotSelectedExeption.cs" />
     <Compile Include="Src\Game\Rules\Basic.cs" />
     <Compile Include="Src\Game\Core\IGameMode.cs" />
     <Compile Include="Src\Game\Rules\IRule.cs" />

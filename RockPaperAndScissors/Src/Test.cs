@@ -8,6 +8,9 @@ namespace RockPaperAndScissors.Src
     [TestFixture]
     class Test
     {
+        /// <summary>
+        /// General tests
+        /// </summary>
         [TestCase]
         public void Main()
         {
@@ -25,6 +28,33 @@ namespace RockPaperAndScissors.Src
 
             Assert.AreEqual(one, winner);
             //Assert.AreEqual(one, winner);
+        }
+
+        /// <summary>
+        /// Tese the Player VS Computer Mode
+        /// </summary>
+        [TestCase]
+        public void PvCMode()
+        {
+            // get the intance
+            IGameMode PVC = PlayerVSComputer.Instance;
+            // setup
+            PVC.Setup(Game.Rules.Basic.Instance);
+            //start 
+            PVC.Start();
+
+            // set player weapon
+            Human p1 = PVC.PlayerOne as Human;
+            p1.SelectedWeapon = Game.Weapons.Scissors.Instance;
+
+            // Fight
+            IPlayer winner = PVC.Fight();
+            // get the winner for teste whith the instead logic
+            IPlayer winnerTest = GameHelper.CompareWeapons(PVC.PlayerTwo, PVC.PlayerOne);
+
+            Assert.AreEqual(winner, winnerTest);
+
+
         }
 
     }
