@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace RockPaperAndScissors.Src.Game.Weapons
 {
@@ -11,8 +7,6 @@ namespace RockPaperAndScissors.Src.Game.Weapons
     /// </summary>
     abstract class Weapon : IWeapon
     {
-      
-
         #region IWeapon
         /// <summary>
         /// Weapon Name
@@ -25,7 +19,27 @@ namespace RockPaperAndScissors.Src.Game.Weapons
         /// <summary>
         /// Weapons that are weaker than this
         /// </summary>
-        public virtual IWeakness[] Weaknesses { get; protected set; }
+        public IList<IWeakness> Weaknesses { get; protected set; }
         #endregion
+
+        /// <summary>
+        /// Add a new Weakness
+        /// </summary>
+        /// <param name="weapon"></param>
+        public void AddWeakness(IWeakness weakness)
+        {
+            // check about just exist weakness
+            foreach(IWeapon weapon in this.Weaknesses)
+            {
+                if(weakness.Weapon == weapon)
+                {
+                    return;
+                }
+            }
+
+            // add a new weakness
+            this.Weaknesses.Add(weakness);
+        }
+
     }
 }

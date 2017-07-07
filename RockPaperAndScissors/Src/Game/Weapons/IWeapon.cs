@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace RockPaperAndScissors.Src.Game.Weapons
 {
     /// <summary>
@@ -19,7 +21,7 @@ namespace RockPaperAndScissors.Src.Game.Weapons
         /// <summary>
         /// Weapons that are weaker than this
         /// </summary>
-        IWeakness[] Weaknesses { get; }
+        IList<IWeakness> Weaknesses { get; }
 
 
     }

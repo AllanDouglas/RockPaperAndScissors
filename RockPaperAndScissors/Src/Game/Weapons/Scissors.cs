@@ -1,4 +1,6 @@
-﻿namespace RockPaperAndScissors.Src.Game.Weapons
+﻿using System.Collections.Generic;
+
+namespace RockPaperAndScissors.Src.Game.Weapons
 {
     /// <summary>
     /// The Scissors
@@ -11,12 +13,12 @@
         /// <summary>
         /// Singleton field
         /// </summary>
-        private static IWeapon _instance;
+        private static Weapon _instance;
 
         /// <summary>
         /// Get a Instance 
         /// </summary>
-        public static IWeapon Instance
+        public static Weapon Instance
         {
             get
             {
@@ -37,14 +39,7 @@
         {
             this.Name = "Scissors";
             this.ImageUri = "Res...";
-
-
-            this.Weaknesses = new Weakness[2];
-
-            this.Weaknesses[0] = new Weakness("Crushed", Rock.Instance);
-
-
-
+            this.Weaknesses = new List<IWeakness>();
         }
 
         #endregion
