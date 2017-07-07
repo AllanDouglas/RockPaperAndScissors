@@ -1,4 +1,6 @@
-﻿using System;
+﻿using RockPaperAndScissors.Src.Game.Core;
+using RockPaperAndScissors.Src.Game.Weapons;
+using System;
 
 namespace RockPaperAndScissors
 {
@@ -9,8 +11,8 @@ namespace RockPaperAndScissors
         /// </summary>        
         static void Main()
         {
-
             
+         
 
         }
     }
