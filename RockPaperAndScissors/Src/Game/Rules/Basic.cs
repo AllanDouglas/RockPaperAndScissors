@@ -44,8 +44,13 @@ namespace RockPaperAndScissors.Src.Game.Rules
             this.AvailableWeapons = new IWeapon[3];
 
             this.AvailableWeapons[0] = Rock.Instance;
-            this.AvailableWeapons[0] = Scissors.Instance;
-            this.AvailableWeapons[0] = Paper.Instance;
+            this.AvailableWeapons[1] = Scissors.Instance;
+            this.AvailableWeapons[2] = Paper.Instance;
+
+            Rock.Instance.AddWeakness(new Weakness("Covered", Paper.Instance));
+            Scissors.Instance.AddWeakness(new Weakness("Crushed", Rock.Instance));
+            Paper.Instance.AddWeakness(new Weakness("Cut", Scissors.Instance));
+
 
         } 
         #endregion
