@@ -56,6 +56,7 @@
     <Compile Include="Src\Game\Core\Computer.cs" />
     <Compile Include="Src\Game\Core\GameHelper.cs" />
     <Compile Include="Src\Game\Core\Human.cs" />
+    <Compile Include="Src\Game\Core\ComputerVSComputer.cs" />
     <Compile Include="Src\Game\Core\PlayerVSComputer.cs" />
     <Compile Include="Src\Game\Core\Exceptions\WeaponNotSelectedExeption.cs" />
     <Compile Include="Src\Game\Rules\Basic.cs" />

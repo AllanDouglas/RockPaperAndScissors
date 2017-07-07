@@ -54,6 +54,27 @@ namespace RockPaperAndScissors.Src
 
             Assert.AreEqual(winner, winnerTest);
 
+        }
+
+        /// <summary>
+        /// Tese the Player VS Computer Mode
+        /// </summary>
+        [TestCase]
+        public void CvCMode()
+        {
+            // get the intance
+            IGameMode CVC = ComputerVSComputer.Instance;
+            // setup
+            CVC.Setup(Game.Rules.Basic.Instance);
+            //start 
+            CVC.Start();
+
+            // Fight
+            IPlayer winner = CVC.Fight();
+            // get the winner for teste whith the instead logic
+            IPlayer winnerTest = GameHelper.CompareWeapons(CVC.PlayerTwo, CVC.PlayerOne);
+
+            Assert.AreEqual(winner, winnerTest);
 
         }
 
