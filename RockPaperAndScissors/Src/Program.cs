@@ -14,7 +14,7 @@ namespace RockPaperAndScissors
          
             Application.EnableVisualStyles();
 
-            Application.Run(new Src.Game.View.ComputerVsComputer(Src.Game.Rules.Basic.Instance));
+            Application.Run(new Src.Game.View.MainMenu());
         }
     }
 }

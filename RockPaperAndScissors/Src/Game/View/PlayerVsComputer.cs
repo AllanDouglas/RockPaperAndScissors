@@ -222,8 +222,18 @@ namespace RockPaperAndScissors.Src.Game.View
             this.SetWeaponImage(PlayerOneImage, p1.SelectedWeapon);
         }
 
+        /// <summary>
+        /// Handler event Click 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MainMenuButtonClickHandler(object sender, EventArgs e)
+        {
+            Dispose();
+        }
 
         #endregion
+
 
     }
 }

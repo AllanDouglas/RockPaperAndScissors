@@ -198,6 +198,16 @@ namespace RockPaperAndScissors.Src.Game.View
             }
         }
 
+        /// <summary>
+        /// Handler event Click 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MainMenuButtonClickHandler(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
         #endregion
     }
 }

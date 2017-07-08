@@ -47,7 +47,7 @@
             // PlayerOneImage
             // 
             this.PlayerOneImage.Image = ((System.Drawing.Image)(resources.GetObject("PlayerOneImage.Image")));
-            this.PlayerOneImage.Location = new System.Drawing.Point(59, 70);
+            this.PlayerOneImage.Location = new System.Drawing.Point(72, 87);
             this.PlayerOneImage.Name = "PlayerOneImage";
             this.PlayerOneImage.Size = new System.Drawing.Size(121, 122);
             this.PlayerOneImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -57,7 +57,7 @@
             // PlayerTwoImage
             // 
             this.PlayerTwoImage.Image = ((System.Drawing.Image)(resources.GetObject("PlayerTwoImage.Image")));
-            this.PlayerTwoImage.Location = new System.Drawing.Point(372, 70);
+            this.PlayerTwoImage.Location = new System.Drawing.Point(385, 87);
             this.PlayerTwoImage.Name = "PlayerTwoImage";
             this.PlayerTwoImage.Size = new System.Drawing.Size(121, 122);
             this.PlayerTwoImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -66,7 +66,7 @@
             // 
             // fightButton
             // 
-            this.fightButton.Location = new System.Drawing.Point(218, 113);
+            this.fightButton.Location = new System.Drawing.Point(231, 130);
             this.fightButton.Name = "fightButton";
             this.fightButton.Size = new System.Drawing.Size(117, 50);
             this.fightButton.TabIndex = 1;
@@ -77,7 +77,7 @@
             // weaponsCBX
             // 
             this.weaponsCBX.FormattingEnabled = true;
-            this.weaponsCBX.Location = new System.Drawing.Point(59, 199);
+            this.weaponsCBX.Location = new System.Drawing.Point(72, 216);
             this.weaponsCBX.Name = "weaponsCBX";
             this.weaponsCBX.Size = new System.Drawing.Size(121, 21);
             this.weaponsCBX.Sorted = true;
@@ -89,16 +89,17 @@
             this.closeButton.BackColor = System.Drawing.Color.Transparent;
             this.closeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("closeButton.BackgroundImage")));
             this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.closeButton.Location = new System.Drawing.Point(529, 12);
+            this.closeButton.Location = new System.Drawing.Point(545, 12);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(38, 35);
             this.closeButton.TabIndex = 5;
             this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Visible = false;
             this.closeButton.Click += new System.EventHandler(this.CloseButtonClickHandler);
             // 
             // restartButton
             // 
-            this.restartButton.Location = new System.Drawing.Point(335, 262);
+            this.restartButton.Location = new System.Drawing.Point(351, 301);
             this.restartButton.Name = "restartButton";
             this.restartButton.Size = new System.Drawing.Size(113, 30);
             this.restartButton.TabIndex = 1;
@@ -108,12 +109,13 @@
             // 
             // mainMenuButton
             // 
-            this.mainMenuButton.Location = new System.Drawing.Point(454, 262);
+            this.mainMenuButton.Location = new System.Drawing.Point(470, 301);
             this.mainMenuButton.Name = "mainMenuButton";
             this.mainMenuButton.Size = new System.Drawing.Size(113, 30);
             this.mainMenuButton.TabIndex = 1;
             this.mainMenuButton.Text = "Main Menu";
             this.mainMenuButton.UseVisualStyleBackColor = true;
+            this.mainMenuButton.Click += new System.EventHandler(this.MainMenuButtonClickHandler);
             // 
             // winnerLabel
             // 
@@ -121,7 +123,7 @@
             this.winnerLabel.BackColor = System.Drawing.Color.OliveDrab;
             this.winnerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.winnerLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.winnerLabel.Location = new System.Drawing.Point(59, 70);
+            this.winnerLabel.Location = new System.Drawing.Point(72, 87);
             this.winnerLabel.Name = "winnerLabel";
             this.winnerLabel.Size = new System.Drawing.Size(86, 24);
             this.winnerLabel.TabIndex = 14;
@@ -130,7 +132,7 @@
             // labelPlayerOne
             // 
             this.labelPlayerOne.AutoSize = true;
-            this.labelPlayerOne.Location = new System.Drawing.Point(59, 51);
+            this.labelPlayerOne.Location = new System.Drawing.Point(72, 68);
             this.labelPlayerOne.Name = "labelPlayerOne";
             this.labelPlayerOne.Size = new System.Drawing.Size(59, 13);
             this.labelPlayerOne.TabIndex = 15;
@@ -139,7 +141,7 @@
             // labelPlayerTwo
             // 
             this.labelPlayerTwo.AutoSize = true;
-            this.labelPlayerTwo.Location = new System.Drawing.Point(369, 51);
+            this.labelPlayerTwo.Location = new System.Drawing.Point(382, 68);
             this.labelPlayerTwo.Name = "labelPlayerTwo";
             this.labelPlayerTwo.Size = new System.Drawing.Size(60, 13);
             this.labelPlayerTwo.TabIndex = 15;
@@ -151,7 +153,7 @@
             this.labelLooser.BackColor = System.Drawing.Color.Crimson;
             this.labelLooser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLooser.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelLooser.Location = new System.Drawing.Point(368, 70);
+            this.labelLooser.Location = new System.Drawing.Point(381, 87);
             this.labelLooser.Name = "labelLooser";
             this.labelLooser.Size = new System.Drawing.Size(68, 24);
             this.labelLooser.TabIndex = 14;
@@ -162,7 +164,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(579, 304);
+            this.ClientSize = new System.Drawing.Size(595, 343);
             this.Controls.Add(this.labelPlayerTwo);
             this.Controls.Add(this.labelPlayerOne);
             this.Controls.Add(this.labelLooser);
@@ -176,6 +178,7 @@
             this.Controls.Add(this.PlayerOneImage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PlayerVsComputer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game";
             this.Load += new System.EventHandler(this.LoadHandler);
             ((System.ComponentModel.ISupportInitialize)(this.PlayerOneImage)).EndInit();

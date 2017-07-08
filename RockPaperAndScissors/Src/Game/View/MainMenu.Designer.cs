@@ -48,30 +48,32 @@ namespace RockPaperAndScissors.Src.Game.View
             this.logoImage.ErrorImage = null;
             this.logoImage.Image = ((System.Drawing.Image)(resources.GetObject("logoImage.Image")));
             this.logoImage.InitialImage = ((System.Drawing.Image)(resources.GetObject("logoImage.InitialImage")));
-            this.logoImage.Location = new System.Drawing.Point(149, 12);
+            this.logoImage.Location = new System.Drawing.Point(155, 12);
             this.logoImage.Name = "logoImage";
-            this.logoImage.Size = new System.Drawing.Size(271, 203);
+            this.logoImage.Size = new System.Drawing.Size(287, 203);
             this.logoImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoImage.TabIndex = 0;
             this.logoImage.TabStop = false;
             // 
             // PvCButton
             // 
-            this.PvCButton.Location = new System.Drawing.Point(208, 221);
+            this.PvCButton.Location = new System.Drawing.Point(226, 221);
             this.PvCButton.Name = "PvCButton";
             this.PvCButton.Size = new System.Drawing.Size(144, 36);
             this.PvCButton.TabIndex = 1;
             this.PvCButton.Text = "Player vs Computer";
             this.PvCButton.UseVisualStyleBackColor = true;
+            this.PvCButton.Click += new System.EventHandler(this.PlayerVsComputerEventHandler);
             // 
             // CvCButton
             // 
-            this.CvCButton.Location = new System.Drawing.Point(208, 263);
+            this.CvCButton.Location = new System.Drawing.Point(226, 263);
             this.CvCButton.Name = "CvCButton";
             this.CvCButton.Size = new System.Drawing.Size(144, 36);
             this.CvCButton.TabIndex = 2;
             this.CvCButton.Text = "Computer vs Computer";
             this.CvCButton.UseVisualStyleBackColor = true;
+            this.CvCButton.Click += new System.EventHandler(this.ComputerVsComputerEventHandler);
             // 
             // closeButton
             // 
@@ -88,7 +90,7 @@ namespace RockPaperAndScissors.Src.Game.View
             // advRulesCX
             // 
             this.advRulesCX.AutoSize = true;
-            this.advRulesCX.Location = new System.Drawing.Point(227, 308);
+            this.advRulesCX.Location = new System.Drawing.Point(245, 308);
             this.advRulesCX.Name = "advRulesCX";
             this.advRulesCX.Size = new System.Drawing.Size(105, 17);
             this.advRulesCX.TabIndex = 3;
@@ -108,8 +110,8 @@ namespace RockPaperAndScissors.Src.Game.View
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "MainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
-            
             ((System.ComponentModel.ISupportInitialize)(this.logoImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

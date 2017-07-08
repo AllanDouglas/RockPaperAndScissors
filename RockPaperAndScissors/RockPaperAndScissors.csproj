@@ -59,6 +59,7 @@
     <Compile Include="Src\Game\Core\ComputerVSComputer.cs" />
     <Compile Include="Src\Game\Core\PlayerVSComputer.cs" />
     <Compile Include="Src\Game\Core\Exceptions\WeaponNotSelectedExeption.cs" />
+    <Compile Include="Src\Game\Rules\Advanced.cs" />
     <Compile Include="Src\Game\Rules\Basic.cs" />
     <Compile Include="Src\Game\Core\IGameMode.cs" />
     <Compile Include="Src\Game\Rules\IRule.cs" />
@@ -85,6 +86,8 @@
     </Compile>
     <Compile Include="Src\Game\Weapons\IWeakness.cs" />
     <Compile Include="Src\Game\Weapons\IWeapon.cs" />
+    <Compile Include="Src\Game\Weapons\Spok.cs" />
+    <Compile Include="Src\Game\Weapons\Lizard.cs" />
     <Compile Include="Src\Game\Weapons\Paper.cs" />
     <Compile Include="Src\Game\Weapons\Rock.cs" />
     <Compile Include="Src\Game\Weapons\Scissors.cs" />

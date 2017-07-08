@@ -29,9 +29,9 @@ namespace RockPaperAndScissors.Src.Game.Weapons
         public void AddWeakness(IWeakness weakness)
         {
             // check about just exist weakness
-            foreach(IWeapon weapon in this.Weaknesses)
+            foreach(IWeakness _weakness in this.Weaknesses)
             {
-                if(weakness.Weapon == weapon)
+                if(weakness.Weapon == _weakness.Weapon)
                 {
                     return;
                 }
