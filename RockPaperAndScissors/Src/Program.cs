@@ -14,10 +14,7 @@ namespace RockPaperAndScissors
          
             Application.EnableVisualStyles();
 
-            var gameMode = Src.Game.Core.PlayerVSComputer.Instance;
-            gameMode.Setup(Src.Game.Rules.Basic.Instance);
-
-            Application.Run(new Src.Game.View.PlayerVsComputer(gameMode));
+            Application.Run(new Src.Game.View.ComputerVsComputer(Src.Game.Rules.Basic.Instance));
         }
     }
 }

@@ -80,6 +80,7 @@
             this.weaponsCBX.Location = new System.Drawing.Point(59, 199);
             this.weaponsCBX.Name = "weaponsCBX";
             this.weaponsCBX.Size = new System.Drawing.Size(121, 21);
+            this.weaponsCBX.Sorted = true;
             this.weaponsCBX.TabIndex = 2;
             this.weaponsCBX.SelectedIndexChanged += new System.EventHandler(this.SelecteWeaponHandler);
             // 
@@ -111,7 +112,7 @@
             this.mainMenuButton.Name = "mainMenuButton";
             this.mainMenuButton.Size = new System.Drawing.Size(113, 30);
             this.mainMenuButton.TabIndex = 1;
-            this.mainMenuButton.Text = "MainMenu";
+            this.mainMenuButton.Text = "Main Menu";
             this.mainMenuButton.UseVisualStyleBackColor = true;
             // 
             // winnerLabel

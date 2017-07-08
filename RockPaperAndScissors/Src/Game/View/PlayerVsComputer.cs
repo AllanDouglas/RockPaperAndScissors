@@ -13,28 +13,36 @@ namespace RockPaperAndScissors.Src.Game.View
     partial class PlayerVsComputer : Form, IGameView
     {
 
+        #region Properties
         /// <summary>
         /// Game Mode for this view
         /// </summary>
-        public IGameMode GameMode { get; private set; }
+        public IGameMode GameMode { get; private set; } 
+        #endregion
 
+        #region Contructor
         /// <summary>
         /// Main contructor
         /// </summary>
-        public PlayerVsComputer(IGameMode gameMode)
+        public PlayerVsComputer(IRule rule)
         {
-            this.GameMode = gameMode;
+            // get the game mode instace
+            this.GameMode = PlayerVSComputer.Instance;
+            // setup the game mode
+            this.GameMode.Setup(rule);
             // initialize components
             InitializeComponent();
         }
 
+        #endregion
+        #region Auxiliary methods
         /// <summary>
         /// Prepare the visual elements
         /// </summary>
         private void Setup()
         {
             //add the weapons to list
-            this.weaponsCBX.Items.Clear();
+            this.weaponsCBX.Items.Clear();            
             this.weaponsCBX.DisplayMember = "Name";
             foreach (var weapon in GameMode.GameRule.AvailableWeapons)
             {
@@ -48,6 +56,8 @@ namespace RockPaperAndScissors.Src.Game.View
             PlayerOneImage.Image = Properties.Resources.logo;
             PlayerTwoImage.Image = Properties.Resources.logo;
 
+            // enable fight button
+            fightButton.Enabled = true;
         }
 
         /// <summary>
@@ -78,7 +88,7 @@ namespace RockPaperAndScissors.Src.Game.View
                     X = this.Width / 2
                 };
                 // show information
-                ShowFeedbackInformation(winnerLabel,location, "DRAW!");
+                ShowFeedbackInformation(winnerLabel, location, "DRAW!");
                 return;
             }
 
@@ -101,7 +111,7 @@ namespace RockPaperAndScissors.Src.Game.View
             }
             // show the label
             ShowFeedbackInformation(winnerLabel, location);
-            ShowFeedbackInformation(labelLooser, looserLocation,looserAction);
+            ShowFeedbackInformation(labelLooser, looserLocation, looserAction);
         }
 
         /// <summary>
@@ -114,7 +124,8 @@ namespace RockPaperAndScissors.Src.Game.View
             imageContainer.Image =
                 Properties.Resources.ResourceManager.GetObject(weapon.ImageUri)
                 as System.Drawing.Image;
-        }
+        } 
+        #endregion
 
         #region Events Handlers
 
@@ -173,25 +184,26 @@ namespace RockPaperAndScissors.Src.Game.View
         /// <param name="e"></param>
         private void FightButtonClickEventHandler(object sender, EventArgs e)
         {
-            // get the winner
+            
             try
             {
+               
                 // get the winner
                 IPlayer winner = this.GameMode.Fight();
                 // set the Playe 2 image 
                 SetWeaponImage(PlayerTwoImage, this.GameMode.PlayerTwo.SelectedWeapon);
                 // handler the winner
                 WinnerHandler(winner);
+                // desable fight button
+                fightButton.Enabled = false;
 
             }
             catch (Core.Exceptions.WeaponNotSelectedExeption ex)
             {
                 Console.WriteLine(ex.StackTrace);
 
-                MessageBox.Show("Select the your Weapon", "Game",
+                MessageBox.Show("Select your Weapon", "Game",
                     MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
-
-
             }
         }
 
