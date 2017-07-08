@@ -44,7 +44,7 @@ namespace RockPaperAndScissors.Src.Game.View
             //add the weapons to list
             this.weaponsCBX.Items.Clear();            
             this.weaponsCBX.DisplayMember = "Name";
-            foreach (var weapon in GameMode.GameRule.AvailableWeapons)
+            foreach (var weapon in GameMode.Rule.AvailableWeapons)
             {
                 this.weaponsCBX.Items.Add(weapon);
             }
@@ -101,13 +101,13 @@ namespace RockPaperAndScissors.Src.Game.View
             {
                 location = PlayerOneImage.Location;
                 looserLocation = PlayerTwoImage.Location;
-                looserAction = GameHelper.FindWinnerAtack(winner, GameMode.PlayerTwo);
+                looserAction = this.GameMode.Rule.AttackSuffered(winner, GameMode.PlayerTwo);
             }
             else
             {
                 location = PlayerTwoImage.Location;
                 looserLocation = PlayerOneImage.Location;
-                looserAction = GameHelper.FindWinnerAtack(winner, GameMode.PlayerOne);
+                looserAction = this.GameMode.Rule.AttackSuffered(winner, GameMode.PlayerOne);
             }
             // show the label
             ShowFeedbackInformation(winnerLabel, location);

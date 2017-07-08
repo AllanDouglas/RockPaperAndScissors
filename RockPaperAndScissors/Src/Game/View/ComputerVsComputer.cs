@@ -91,13 +91,13 @@ namespace RockPaperAndScissors.Src.Game.View
             {
                 location = PlayerOneImage.Location;
                 looserLocation = PlayerTwoImage.Location;
-                looserAction = GameHelper.FindWinnerAtack(winner, GameMode.PlayerTwo);
+                looserAction = this.GameMode.Rule.AttackSuffered(winner, GameMode.PlayerTwo);
             }
             else
             {
                 location = PlayerTwoImage.Location;
                 looserLocation = PlayerOneImage.Location;
-                looserAction = GameHelper.FindWinnerAtack(winner, GameMode.PlayerOne);
+                looserAction = this.GameMode.Rule.AttackSuffered(winner, GameMode.PlayerOne);
             }
             // show the label
             ShowFeedbackInformation(winnerLabel, location);

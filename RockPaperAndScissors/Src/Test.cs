@@ -24,7 +24,7 @@ namespace RockPaperAndScissors.Src
             Console.WriteLine(one.SelectedWeapon.Name);
             Console.WriteLine(two.SelectedWeapon.Name);
 
-            IPlayer winner = GameHelper.CompareWeapons(one, two);
+            IPlayer winner = basics.CompareWeapons(one, two);
 
             Assert.AreEqual(one, winner);
             //Assert.AreEqual(one, winner);
@@ -50,7 +50,7 @@ namespace RockPaperAndScissors.Src
             // Fight
             IPlayer winner = PVC.Fight();
             // get the winner for teste whith the instead logic
-            IPlayer winnerTest = GameHelper.CompareWeapons(PVC.PlayerTwo, PVC.PlayerOne);
+            IPlayer winnerTest = PVC.Rule.CompareWeapons(PVC.PlayerTwo, PVC.PlayerOne);
 
             Assert.AreEqual(winner, winnerTest);
 
@@ -72,7 +72,7 @@ namespace RockPaperAndScissors.Src
             // Fight
             IPlayer winner = CVC.Fight();
             // get the winner for teste whith the instead logic
-            IPlayer winnerTest = GameHelper.CompareWeapons(CVC.PlayerTwo, CVC.PlayerOne);
+            IPlayer winnerTest = CVC.Rule.CompareWeapons(CVC.PlayerTwo, CVC.PlayerOne);
 
             Assert.AreEqual(winner, winnerTest);
 

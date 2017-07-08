@@ -20,7 +20,7 @@ namespace RockPaperAndScissors.Src.Game.Core
         /// <summary>
         /// Define the Game Rule
         /// </summary>
-        Rules.IRule GameRule { get; }
+        Rules.IRule Rule { get; }
 
         /// <summary>
         /// Setup the GameMode 

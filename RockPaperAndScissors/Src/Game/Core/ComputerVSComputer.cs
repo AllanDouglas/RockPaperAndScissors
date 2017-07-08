@@ -24,7 +24,7 @@ namespace RockPaperAndScissors.Src.Game.Core
         /// <summary>
         /// Game Rule
         /// </summary>
-        public IRule GameRule { get; private set; }
+        public IRule Rule { get; private set; }
         #endregion
 
         #region Sinlegeton
@@ -65,7 +65,7 @@ namespace RockPaperAndScissors.Src.Game.Core
         /// <param name="rule"></param>
         public void Setup(IRule rule)
         {
-            this.GameRule = rule;
+            this.Rule = rule;
         }
 
         /// <summary>
@@ -74,18 +74,18 @@ namespace RockPaperAndScissors.Src.Game.Core
         public void Start()
         {
             // check about null rule
-            if (this.GameRule == null)
+            if (this.Rule == null)
             {
                 throw new BadGameModeSetupException("The GameRule can't be null. Setup first");
             }
             // cast the player1 object
             Computer p1 = PlayerOne as Computer;
             // choose a new weapon for him
-            p1.Choose(this.GameRule.AvailableWeapons);
+            p1.Choose(this.Rule.AvailableWeapons);
             // cast the player2 object
             Computer p2 = PlayerTwo as Computer;
             // choose a new weapon for him
-            p2.Choose(this.GameRule.AvailableWeapons);
+            p2.Choose(this.Rule.AvailableWeapons);
 
         }
 
@@ -108,7 +108,7 @@ namespace RockPaperAndScissors.Src.Game.Core
             try
             {
                 // try get the winnder
-                winner = GameHelper.CompareWeapons(PlayerOne, PlayerTwo);
+                winner = this.Rule.CompareWeapons(PlayerOne, PlayerTwo);
             }
             catch (WeaponNotSelectedExeption e)
             {

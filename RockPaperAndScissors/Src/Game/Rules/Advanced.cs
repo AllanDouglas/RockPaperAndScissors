@@ -6,12 +6,12 @@ namespace RockPaperAndScissors.Src.Game.Rules
     /// Define the Basic Rules
     /// to the Game
     /// </summary>
-    class Advanced : IRule
+    class Advanced : Rule
     {
         /// <summary>
         /// The Available weapons to this Game Style
         /// </summary>
-        public IWeapon[] AvailableWeapons { get; private set; }
+        public override IWeapon[] AvailableWeapons { get; protected set; }
 
         #region Singleton
         /// <summary>
@@ -34,7 +34,7 @@ namespace RockPaperAndScissors.Src.Game.Rules
         }
         #endregion
 
-        #region Constructos
+        #region Constructors
         /// <summary>
         /// Main constructor
         /// </summary>

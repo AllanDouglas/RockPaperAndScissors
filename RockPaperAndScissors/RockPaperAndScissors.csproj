@@ -54,7 +54,6 @@
   <ItemGroup>
     <Compile Include="Src\Game\Core\Exceptions\BadGameModeSetupException.cs" />
     <Compile Include="Src\Game\Core\Computer.cs" />
-    <Compile Include="Src\Game\Core\GameHelper.cs" />
     <Compile Include="Src\Game\Core\Human.cs" />
     <Compile Include="Src\Game\Core\ComputerVSComputer.cs" />
     <Compile Include="Src\Game\Core\PlayerVSComputer.cs" />
@@ -64,6 +63,7 @@
     <Compile Include="Src\Game\Core\IGameMode.cs" />
     <Compile Include="Src\Game\Rules\IRule.cs" />
     <Compile Include="Src\Game\Core\IPlayer.cs" />
+    <Compile Include="Src\Game\Rules\Rule.cs" />
     <Compile Include="Src\Game\Utils\Random.cs" />
     <Compile Include="Src\Game\View\ComputerVsComputer.cs">
       <SubType>Form</SubType>
