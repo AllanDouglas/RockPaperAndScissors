@@ -11,8 +11,13 @@ namespace RockPaperAndScissors
         [STAThread]
         static void Main()
         {
+         
             Application.EnableVisualStyles();
-            Application.Run(new Src.Game.View.MainMenu());
+
+            var gameMode = Src.Game.Core.PlayerVSComputer.Instance;
+            gameMode.Setup(Src.Game.Rules.Basic.Instance);
+
+            Application.Run(new Src.Game.View.PlayerVsComputer(gameMode));
         }
     }
 }

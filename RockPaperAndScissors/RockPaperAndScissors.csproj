@@ -101,6 +101,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Src\Game\View\ComputerVsComputer.resx">
       <DependentUpon>ComputerVsComputer.cs</DependentUpon>
@@ -131,8 +132,15 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Src\Game\Res\" />
+    <Content Include="Res\close.png" />
+    <Content Include="Res\Lizard.png" />
+    <Content Include="Res\logo.png" />
+    <Content Include="Res\Paper.png" />
+    <Content Include="Res\Rock.png" />
+    <Content Include="Res\Scissors.png" />
+    <Content Include="Res\Spok.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

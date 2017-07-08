@@ -46,5 +46,26 @@ namespace RockPaperAndScissors.Src.Game.Core
             return one;
             
         }
+
+        /// <summary>
+        /// Get the Suffered blow
+        /// </summary>
+        /// <param name="winner"></param>
+        /// <param name="loser"></param>
+        /// <returns></returns>
+        public static string FindWinnerAtack(IPlayer winner, IPlayer loser)
+        {   
+            // check if the Two's Weapon is more strong the One's Weapon 
+            // return Two
+            foreach (IWeakness weakness in loser.SelectedWeapon.Weaknesses)
+            {
+                if (weakness.Weapon.GetType().Equals(winner.SelectedWeapon.GetType()))
+                {         
+                    return  weakness.Action;
+                }
+            }
+
+            return null;
+        }
     }
 }

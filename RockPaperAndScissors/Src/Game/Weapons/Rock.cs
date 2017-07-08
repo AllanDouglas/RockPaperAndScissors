@@ -38,7 +38,7 @@ namespace RockPaperAndScissors.Src.Game.Weapons
         private Rock()
         {
             this.Name = "Rock";
-            this.ImageUri = "Res...";
+            this.ImageUri = "Rock";
 
             this.Weaknesses = new List<IWeakness>();
 

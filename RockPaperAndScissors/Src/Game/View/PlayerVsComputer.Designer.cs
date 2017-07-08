@@ -37,23 +37,30 @@
             this.restartButton = new System.Windows.Forms.Button();
             this.mainMenuButton = new System.Windows.Forms.Button();
             this.winnerLabel = new System.Windows.Forms.Label();
+            this.labelPlayerOne = new System.Windows.Forms.Label();
+            this.labelPlayerTwo = new System.Windows.Forms.Label();
+            this.labelLooser = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerOneImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerTwoImage)).BeginInit();
             this.SuspendLayout();
             // 
             // PlayerOneImage
             // 
+            this.PlayerOneImage.Image = ((System.Drawing.Image)(resources.GetObject("PlayerOneImage.Image")));
             this.PlayerOneImage.Location = new System.Drawing.Point(59, 70);
             this.PlayerOneImage.Name = "PlayerOneImage";
             this.PlayerOneImage.Size = new System.Drawing.Size(121, 122);
+            this.PlayerOneImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PlayerOneImage.TabIndex = 0;
             this.PlayerOneImage.TabStop = false;
             // 
             // PlayerTwoImage
             // 
+            this.PlayerTwoImage.Image = ((System.Drawing.Image)(resources.GetObject("PlayerTwoImage.Image")));
             this.PlayerTwoImage.Location = new System.Drawing.Point(372, 70);
             this.PlayerTwoImage.Name = "PlayerTwoImage";
             this.PlayerTwoImage.Size = new System.Drawing.Size(121, 122);
+            this.PlayerTwoImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PlayerTwoImage.TabIndex = 0;
             this.PlayerTwoImage.TabStop = false;
             // 
@@ -65,6 +72,7 @@
             this.fightButton.TabIndex = 1;
             this.fightButton.Text = "Fight";
             this.fightButton.UseVisualStyleBackColor = true;
+            this.fightButton.Click += new System.EventHandler(this.FightButtonClickEventHandler);
             // 
             // weaponsCBX
             // 
@@ -73,6 +81,7 @@
             this.weaponsCBX.Name = "weaponsCBX";
             this.weaponsCBX.Size = new System.Drawing.Size(121, 21);
             this.weaponsCBX.TabIndex = 2;
+            this.weaponsCBX.SelectedIndexChanged += new System.EventHandler(this.SelecteWeaponHandler);
             // 
             // closeButton
             // 
@@ -117,12 +126,45 @@
             this.winnerLabel.TabIndex = 14;
             this.winnerLabel.Text = "WINNER";
             // 
+            // labelPlayerOne
+            // 
+            this.labelPlayerOne.AutoSize = true;
+            this.labelPlayerOne.Location = new System.Drawing.Point(59, 51);
+            this.labelPlayerOne.Name = "labelPlayerOne";
+            this.labelPlayerOne.Size = new System.Drawing.Size(59, 13);
+            this.labelPlayerOne.TabIndex = 15;
+            this.labelPlayerOne.Text = "Player One";
+            // 
+            // labelPlayerTwo
+            // 
+            this.labelPlayerTwo.AutoSize = true;
+            this.labelPlayerTwo.Location = new System.Drawing.Point(369, 51);
+            this.labelPlayerTwo.Name = "labelPlayerTwo";
+            this.labelPlayerTwo.Size = new System.Drawing.Size(60, 13);
+            this.labelPlayerTwo.TabIndex = 15;
+            this.labelPlayerTwo.Text = "Player Two";
+            // 
+            // labelLooser
+            // 
+            this.labelLooser.AutoSize = true;
+            this.labelLooser.BackColor = System.Drawing.Color.Crimson;
+            this.labelLooser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLooser.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelLooser.Location = new System.Drawing.Point(368, 70);
+            this.labelLooser.Name = "labelLooser";
+            this.labelLooser.Size = new System.Drawing.Size(68, 24);
+            this.labelLooser.TabIndex = 14;
+            this.labelLooser.Text = "Looser";
+            // 
             // PlayerVsComputer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(579, 304);
+            this.Controls.Add(this.labelPlayerTwo);
+            this.Controls.Add(this.labelPlayerOne);
+            this.Controls.Add(this.labelLooser);
             this.Controls.Add(this.winnerLabel);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.weaponsCBX);
@@ -152,5 +194,8 @@
         private System.Windows.Forms.Button restartButton;
         private System.Windows.Forms.Button mainMenuButton;
         private System.Windows.Forms.Label winnerLabel;
+        private System.Windows.Forms.Label labelPlayerOne;
+        private System.Windows.Forms.Label labelPlayerTwo;
+        private System.Windows.Forms.Label labelLooser;
     }
 }

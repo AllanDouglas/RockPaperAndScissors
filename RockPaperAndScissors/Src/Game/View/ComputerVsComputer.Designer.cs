@@ -42,23 +42,27 @@
             // 
             // PlayerOneImage
             // 
-            this.PlayerOneImage.Location = new System.Drawing.Point(64, 50);
+            this.PlayerOneImage.Image = ((System.Drawing.Image)(resources.GetObject("PlayerOneImage.Image")));
+            this.PlayerOneImage.Location = new System.Drawing.Point(60, 72);
             this.PlayerOneImage.Name = "PlayerOneImage";
             this.PlayerOneImage.Size = new System.Drawing.Size(121, 122);
+            this.PlayerOneImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PlayerOneImage.TabIndex = 7;
             this.PlayerOneImage.TabStop = false;
             // 
             // PlayerTwoImage
             // 
-            this.PlayerTwoImage.Location = new System.Drawing.Point(372, 50);
+            this.PlayerTwoImage.Image = ((System.Drawing.Image)(resources.GetObject("PlayerTwoImage.Image")));
+            this.PlayerTwoImage.Location = new System.Drawing.Point(368, 72);
             this.PlayerTwoImage.Name = "PlayerTwoImage";
             this.PlayerTwoImage.Size = new System.Drawing.Size(121, 122);
+            this.PlayerTwoImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PlayerTwoImage.TabIndex = 6;
             this.PlayerTwoImage.TabStop = false;
             // 
             // fightButton
             // 
-            this.fightButton.Location = new System.Drawing.Point(223, 93);
+            this.fightButton.Location = new System.Drawing.Point(219, 115);
             this.fightButton.Name = "fightButton";
             this.fightButton.Size = new System.Drawing.Size(117, 50);
             this.fightButton.TabIndex = 10;
@@ -100,7 +104,7 @@
             this.winnerLabel.BackColor = System.Drawing.Color.OliveDrab;
             this.winnerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.winnerLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.winnerLabel.Location = new System.Drawing.Point(64, 50);
+            this.winnerLabel.Location = new System.Drawing.Point(60, 72);
             this.winnerLabel.Name = "winnerLabel";
             this.winnerLabel.Size = new System.Drawing.Size(86, 24);
             this.winnerLabel.TabIndex = 13;
@@ -121,10 +125,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ComputerVsComputer";
             this.Text = "ComputerVsComputer";
-            
             ((System.ComponentModel.ISupportInitialize)(this.PlayerOneImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerTwoImage)).EndInit();
-
             this.ResumeLayout(false);
             this.PerformLayout();
 
